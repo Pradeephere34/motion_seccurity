@@ -1,0 +1,30 @@
+menu "Motion Security IoT"
+
+config MOTION_WIFI_SSID
+    string "Wi-Fi network name (SSID)"
+    default ""
+    help
+        Enter the 2.4 GHz Wi-Fi network used by the ESP32.
+
+config MOTION_WIFI_PASSWORD
+    string "Wi-Fi password"
+    default ""
+    help
+        Stored in sdkconfig as plaintext. Do not commit or share sdkconfig.
+
+config MOTION_MQTT_BROKER_URI
+    string "MQTT broker URI"
+    default "mqtt://192.168.1.100:1883"
+    help
+        Use the LAN IP of the computer running the MQTT broker, not localhost.
+
+config MOTION_MQTT_TOPIC
+    string "Motion state topic"
+    default "home/security/pir/state"
+
+config MOTION_PIR_GPIO
+    int "PIR sensor GPIO"
+    range 0 39
+    default 27
+
+endmenu

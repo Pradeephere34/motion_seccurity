@@ -1,0 +1,20 @@
+# ESP-IDF build artifacts
+build/
+
+# sdkconfig contains local Wi-Fi credentials and broker settings; do not commit
+sdkconfig
+sdkconfig.old
+
+# Managed components are fetched by the component manager from dependencies.lock
+managed_components/
+
+# Local IDE / editor settings
+.vscode/
+*.code-workspace
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
